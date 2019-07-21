@@ -1,5 +1,11 @@
 $(document.body).ready((function() {
-	for(var i=1; i <= 100; i++) {
+	const topNumberAnswer = prompt('What number should be counted to?'); // Prompts user for max number
+	const topNumber = parseInt(topNumberAnswer) // Converts to integer
+	fizzBuzz(topNumber) // Runs fizz buzz function
+}));
+
+function fizzBuzz(countTo) {
+	for(var i=1; i <= countTo; i++) {
 		if (i % 3 === 0) { // If divisible by 3
 			if (i % 5 === 0) { // And divisible by 5
 				$(document.body).append('<p>fizz buzz</p>'); // Append fizz buzz
@@ -12,4 +18,4 @@ $(document.body).ready((function() {
 			$(document.body).append(`<p>${i}</p>`);
 		}
 	};
-}));
+}
